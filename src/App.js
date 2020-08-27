@@ -6,6 +6,8 @@ import Navbar from 'react-bootstrap/Navbar';
 import Nav from 'react-bootstrap/Nav';
 import './App.css';
 
+import Footer from './components/Footer';
+
 class App extends React.Component {
   constructor(props){
     super(props);
@@ -39,7 +41,7 @@ class App extends React.Component {
           <Navbar className="border-bottom" bg="transparent" expand="lg">
             <Navbar.Brand>Gian Gravina</Navbar.Brand>
 
-            <Navbar.Toggle aria-controls="navbar-toggle" />
+            <Navbar.Toggle className="border-0" aria-controls="navbar-toggle" />
             <Navbar.Collapse id="navbar-toggle">
               <Nav className="ml-auto">
                 <Link className="nav-link" to="/">Home</Link>
@@ -49,8 +51,11 @@ class App extends React.Component {
             </Navbar.Collapse>
           </Navbar>
 
+        <Footer />
         </Container>
       </Router>
+
+       
     );
   }
 }
