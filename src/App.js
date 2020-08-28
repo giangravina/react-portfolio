@@ -1,10 +1,10 @@
 import React from 'react';
 import { BrowserRouter as Router, Route, Link } from 'react-router-dom';
 import Container from 'react-bootstrap/Container';
-import NavBar from 'react-bootstrap/Navbar';
-import Navbar from 'react-bootstrap/Navbar';
-import Nav from 'react-bootstrap/Nav';
+
+import Navbar from './components/Navbar/Navbar';
 import './App.css';
+
 
 import Footer from './components/Footer';
 import HomePage from './pages/HomePage';
@@ -40,8 +40,9 @@ class App extends React.Component {
     return (
       <Router>
         <Container className='p-0' fluid={true}>
+          <Navbar />
 
-          <Navbar className="border-bottom" bg="transparent" expand="lg">
+          {/* <Navbar className="border-bottom" bg="dark" variant="dark" expand="lg">
             <Navbar.Brand>Gian Gravina</Navbar.Brand>
 
             <Navbar.Toggle className="border-0" aria-controls="navbar-toggle" />
@@ -52,7 +53,7 @@ class App extends React.Component {
                 <Link className="nav-link" to="/contact">Contact</Link>
               </Nav>
             </Navbar.Collapse>
-          </Navbar>
+          </Navbar> */}
 
           <Route path="/" exact render={() => <HomePage title={this.state.home.title} subTitle={this.state.home.subTitle} text={this.state.home.text} />} />
           <Route path="/about" render={() => <AboutPage title={this.state.about.title} />} />
