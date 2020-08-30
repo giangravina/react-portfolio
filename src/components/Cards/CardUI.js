@@ -12,6 +12,8 @@ const Card = props => {
             <a target="_blank" href={props.link} className="btn card-button">Button</a>
         </div>
         </div>
+
+        
     );
 }
 

@@ -2,23 +2,58 @@ import React from 'react';
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
+import { Link } from 'react-router-dom';
 
 
 function Footer(){
 
     return (
-        <footer className="mt-5">
-            <Container fluid={true}>
-                <Row className="border-top justify-content-between p-3">
-                    <Col className="p-0" md={3} sm={12}>
-                        Gian Gravina
-                    </Col>
-                    <Col className="p-0 d-flex justify-content-end" md={3}>
-                        This site was made by gian gravina
-                    </Col>
-                </Row>
-            </Container>
-        </footer>
+        <div className='footer-container'>
+            {/* <div className="footer-links">
+                <div className="footer-links-wrapper">
+                    <div className="footer-link-items">
+                        <h2>About</h2>
+                        <Link to='/'>Home</Link>
+                        <Link to='/about'>About</Link>
+                        <Link to='/contact'>Contact</Link>
+
+                    </div>
+                </div>
+            </div> */}
+            <section className="social-media">
+                <div className="social-media-wrap">
+                    <div className="footer-logo">
+                        <Link to = "/" className="social-logo">
+                            <i className="fab fa-typo3"></i>
+                        </Link>
+                    </div>
+                    <small className="website-rights">Gian 2020</small>
+                    <div className="social-icons">
+                        <Link className="social-icon-link facebook"
+                        to=''
+                        target="_blank"
+                        arial-label="facebook"
+                        >
+                            <i className="fab fa-facebook-f" />
+                        </Link>
+                        <Link className="social-icon-link instagram"
+                        to=''
+                        target="_blank"
+                        arial-label="instagram"
+                        >
+                          <i className="fab fa-linkedin" />
+                        </Link>
+                        <Link className="social-icon-link facebook"
+                        to=''
+                        target="_blank"
+                        arial-label="facebook"
+                        >
+                         <i className="fab fa-github" />
+                        </Link>
+                    </div>
+                </div>
+            </section>
+        </div>
     );
 
 }
